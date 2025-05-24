@@ -1,0 +1,47 @@
+# Default values for ddclient.
+deployment:
+  env:
+    # host: required
+    interval: 60
+    iplookup_uri: https://checkipv4.dedyn.io
+    server: update.dedyn.io
+    service_type: dyndns2
+    user_login: ""
+volumeMounts:
+- name: secret
+  mountPath: /run/secrets/ddclient-user
+  subPath: ddclient-user
+volumes:
+- name: secret
+  secret:
+    secretName: ddclient-user
+
+image:
+  repository: richblox/ddclient
+  pullPolicy: IfNotPresent
+  # tag: default
+
+imagePullSecrets: [ name: regcred ]
+nameOverride: ""
+fullnameOverride: ""
+
+deployment: {}
+serviceAccount: {}
+podAnnotations: {}
+podSecurityContext: {}
+securityContext: {}
+
+service:
+  enabled: false
+
+ingress:
+  enabled: false
+
+resources: {}
+
+autoscaling:
+  enabled: false
+
+nodeSelector: {}
+tolerations: []
+affinity: {}
