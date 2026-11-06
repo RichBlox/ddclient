@@ -4,7 +4,7 @@ LABEL org.opencontainers.image.authors="Robin Rijkeboer robin@richblox.nl" \
     org.label-schema.license=GPL-2.0 \
     org.label-schema.name=ddclient
 
-ARG DDCLIENT_VERSION=3.11.2-r0
+ARG DDCLIENT_VERSION=4.0.0-r2
 ENV HOST= \
     INTERVAL=60 \
     IPLOOKUP_URI=https://checkipv4.dedyn.io \
