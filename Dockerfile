@@ -1,4 +1,4 @@
-FROM alpine:3.21
+FROM alpine:3.24
 LABEL org.opencontainers.image.authors="Robin Rijkeboer robin@richblox.nl" \
     org.opencontainers.image.source=https://github.com/RichBlox/ddclient \
     org.label-schema.license=GPL-2.0 \
